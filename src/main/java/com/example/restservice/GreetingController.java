@@ -22,6 +22,10 @@ public class GreetingController {
         String isSuccess="Y";
         try{
             greeting=new Greeting(counter.incrementAndGet(), String.format(template, name));
+            long id=greeting.getId();
+            if(id%5==0){
+                throw new RuntimeException("出错了，全错了"+id);
+            }
         }catch(Exception e){
             isSuccess="N";
             logger.error("Error",e);

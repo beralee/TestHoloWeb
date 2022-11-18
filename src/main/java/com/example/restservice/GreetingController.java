@@ -14,6 +14,7 @@ public class GreetingController {
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
     private static final Logger logger = LogManager.getLogger(GreetingController.class);
+    private static final Logger errorLogger = LogManager.getLogger("COMMON-ERROR");
 
 
     @GetMapping("/greeting")
@@ -28,7 +29,7 @@ public class GreetingController {
             }
         }catch(Exception e){
             isSuccess="N";
-            logger.error("Error",e);
+            errorLogger.error("Error",e);
         }finally {
             logger.info(isSuccess+","+ greeting.getId()+","+name);
         }

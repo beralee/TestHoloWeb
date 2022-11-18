@@ -33,6 +33,9 @@
         <Logger name="org.springframework.boot" level="error" additivity="false">
             <AppenderRef ref="LogToConsole"/>
         </Logger>
+        <Logger name="COMMON-ERROR" level="error" additivity="false">
+            <AppenderRef ref="LogToErrorFile"/>
+        </Logger>
         <Root level="error">
             <AppenderRef ref="LogToErrorFile"/>
             <AppenderRef ref="LogToConsole"/>

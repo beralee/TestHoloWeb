@@ -1,0 +1,4 @@
+Game_name:请设置游戏名称;
+Game_key:3682d65bffe8ea;
+Title_bgm:TeaBreak.mp3;
+Title_img:cafe.jpg;
